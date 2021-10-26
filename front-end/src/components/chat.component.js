@@ -54,10 +54,11 @@ export default class chat extends Component {
     return (
       <div>
         <div style={{ left: 0, paddingTop: "120px", position: "absolute" }}>
-          <ul>
+          <ul className="list-group">
             {this.state.conversations.map((c) => {
               return (
                 <li
+                  className="list-group-item"
                   onClick={() => {
                     this.setState({ emailStatus: true, currentConv: c });
                     this.getMessages(c);
